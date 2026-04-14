@@ -1,0 +1,38 @@
+/* desktop first */
+/* desktop >= 992px até o infinito */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.icone {
+    width: 100px;
+    height: 100px;
+}
+
+/* breakpoints | ponto de quebra do layout */
+/* tablets <= 992px */
+@media screen and (max-width: 991px){
+    h1 {
+        color: green;
+    }
+    .icone {
+        display: none;
+    }
+}
+
+/* smartphones < 772px */
+@media screen and (max-width: 772px){
+    h1 {
+        color: white;
+        background-color: pink;
+    }
+    .icone {
+        display: flex;
+    }
+}
