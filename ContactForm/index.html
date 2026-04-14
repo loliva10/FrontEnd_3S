@@ -19,7 +19,7 @@
     </header>
     <main>
         <div class="container">
-            <form class="form-contact" action="">
+            <form class="form-contact" onsubmit="validarFormulario(event)">
                 <div class="form-contact_linha">
                     <div class="form-contact_col-a">
                         <label class="form-contact_label" for="">Nome</label>
@@ -45,11 +45,11 @@
                         <label class="form-contact_label" for="">Telefone</label>
                     </div>
                     <div class="form-contact_col-b">
-                        <input class="form-contact_input form-contact_input-terco" type="text" id="DDI" name="DDI"
+                        <input class="form-contact_input form-contact_input-terco" type="text" id="ddi" name="DDI"
                             placeholder="DDI">
-                        <input class="form-contact_input form-contact_input-terco" type="text" id="DDD" name="DDD"
+                        <input class="form-contact_input form-contact_input-terco" type="text" id="ddd" name="DDD"
                             placeholder="DDD">
-                        <input class="form-contact_input form-contact_input-terco" type="text" id="Número" name="Número"
+                        <input class="form-contact_input form-contact_input-terco" type="text" id="numero" name="Número"
                             placeholder="Número">
                     </div>
                 </div>
@@ -58,12 +58,12 @@
                         <label class="form-contact_label" for="">Endereço</label>
                     </div>
                     <div class="form-contact_col-b">
-                        <input class="form-contact_input form-contact_input-quarto" type="text" id="Cep" name="Cep"
+                        <input class="form-contact_input form-contact_input-quarto" type="text" id="cep" name="Cep"
                             placeholder="Cep">
-                        <input class="form-contact_input form-contact_input-metade" type="text" id="Rua" name="Rua"
+                        <input class="form-contact_input form-contact_input-metade" type="text" id="rua" name="Rua"
                             placeholder="Rua">
-                        <input class="form-contact_input form-contact_input-quarto" type="text" id="Número"
-                            name="Número" placeholder="Número">
+                        <input class="form-contact_input form-contact_input-quarto" type="text" id="bloco"
+                            name="Bloco" placeholder="Bloco">
                     </div>
                 </div>
                 <div class="form-contact_linha">
@@ -71,11 +71,11 @@
                         <label class="form-contact_label" for=""></label>
                     </div>
                     <div class="form-contact_col-b">
-                        <input class="form-contact_input form-contact_input-terco" type="text" id="Estado" name="Estado"
+                        <input class="form-contact_input form-contact_input-terco" type="text" id="estado" name="Estado"
                             placeholder="Estado">
-                        <input class="form-contact_input form-contact_input-terco" type="text" id="Cidade" name="Cidade"
+                        <input class="form-contact_input form-contact_input-terco" type="text" id="cidade" name="Cidade"
                             placeholder="Cidade">
-                        <input class="form-contact_input form-contact_input-terco" type="text" id="Bairro" name="Bairro"
+                        <input class="form-contact_input form-contact_input-terco" type="text" id="bairro" name="Bairro"
                             placeholder="Bairro">
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                         <label class="form-contact_label" for=""></label>
                     </div>
                     <div class="form-contact_col-b">
-                        <input class="form-contact_input form-contact_input-terco" type="text" id="Complemento"
+                        <input class="form-contact_input form-contact_input-terco" type="text" id="complemento"
                             name="Complemento" placeholder="Complemento">
                     </div>
                 </div>
@@ -93,14 +93,14 @@
                         <label class="form-contact_label" for="">Anotações</label>
                     </div>
                     <div class="form-contact_col-b">
-                        <textarea class="form-contact_input form-contact_textarea" id="Anotacoes" name="Anotacoes"
+                        <textarea class="form-contact_input form-contact_textarea" id="anotacoes" name="Anotacoes"
                             placeholder="Suas anotações aqui"></textarea>
                     </div>
                 </div>
                 <div class="form-contact_linha">
                     <div class="form-contact_col-a"></div>
                     <div class="form-contact_col-b-botoes">
-                        <button type="submit">Cadastrar</button>
+                        <button /*onclick="validarFormulario()"*/ type="submit">Cadastrar</button>
                         <button type="reset">Limpar</button>
                     </div>
                 </div>
@@ -111,6 +111,12 @@
     <footer class="form-contact_footer">
         Todos os direitos reservados
     </footer>
+    <section class="cadastros">
+        <article class="cadastro">
+
+        </article>
+    </section>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
