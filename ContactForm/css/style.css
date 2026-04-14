@@ -91,8 +91,8 @@ body {
     color: #18a2c9;
     border: none;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-    outline: none;   
-    border-radius: 3px; 
+    outline: none;
+    border-radius: 3px;
     transition: background-color 0.4s, color 0.4s;
     margin-bottom: 8px;
 }
@@ -134,7 +134,7 @@ body {
 
 .form-contact_col-b-botoes {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     gap: 15px;
     width: 90%;
 }
@@ -170,47 +170,47 @@ body {
 /* Responsivo */
 
 /* tablet */
-@media (max-width: 900px){
-    .container{
+@media (max-width: 900px) {
+    .container {
         padding: 0 20px;
     }
 
-    .form-contact_col-a{
+    .form-contact_col-a {
         width: 20%;
     }
 
-    .form-contact_col-b{
+    .form-contact_col-b {
         width: 80%;
     }
 
-    .form-contact_col-b-botoes button{
+    .form-contact_col-b-botoes button {
         width: 250px;
     }
 }
 
 /* celular */
-@media (max-width: 600px){
-    .form-header_contact-form{
+@media (max-width: 600px) {
+    .form-header_contact-form {
         font-size: 28px;
         text-align: center;
     }
 
-    .form-header_text{
+    .form-header_text {
         text-align: center;
         padding: 0 15px;
     }
 
-    .form-contact_linha{
+    .form-contact_linha {
         flex-direction: column;
         align-items: stretch;
         gap: 8px;
     }
 
-    .form-contact_col-a{
-        width: 100%;
+    .form-contact_col-a {
+        display: none;
     }
 
-    .form-contact_col-b{
+    .form-contact_col-b {
         width: 100%;
         flex-direction: column;
         gap: 12px;
@@ -219,24 +219,24 @@ body {
     .form-contact_input-metade,
     .form-contact_input-terco,
     .form-contact_input-quarto,
-    .form-contact_input-inteiro{
+    .form-contact_input-inteiro {
         width: 100%;
     }
 
-    .form-contact_textarea{
+    .form-contact_textarea {
         height: 180px;
     }
 
-    .form-contact_col-b-botoes{
+    .form-contact_col-b-botoes {
         flex-direction: column;
         width: 100%;
     }
 
-    .form-contact_col-b-botoes button{
+    .form-contact_col-b-botoes button {
         width: 100%;
     }
 
-    .form-contact_footer{
+    .form-contact_footer {
         font-size: 14px;
         text-align: center;
         padding: 10px;
