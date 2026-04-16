@@ -1,4 +1,56 @@
-function validarFormulario(event){
+// Essa função recebe os dados do formulário em um objeto JavaScript
+async function cadastrarContato(objetoContato) {
+    console.log(objetoContato);
+
+    // Chamar a api com o fetch
+    const resposta = await fetch("http://localhost:3000/contatos", {
+        method: "POST",
+        body: JSON.stringify(objetoContato), // converte o objeto JavaScript em JSON 
+        headers: {// Informa para a api que o body está sendo enviado no formato  json
+            "Content-Type": "application/json; charset=UTF-8",
+        }
+    });
+
+    return false;
+}
+
+async function buscarEndereco(cep) {
+    if (cep.trim().length < 8) {
+        // quando o cep não vier preenchido
+        alert("O CEP deve ter 8 números");
+        return false;
+    }
+
+    // busca o CEP lá na ViaCEP
+    try {
+        aguardarCampos();
+
+        let retorno = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+        let dados = await retorno.json()
+
+        console.log(dados); // objeto dados
+        console.log(dados.logradouro); // nome da rua
+        console.log(dados.bairro); // bairro
+        console.log(dados.localidade); // cidade
+        console.log(dados.uf); // estado
+
+        document.getElementById("rua").value = dados.logradouro;
+        document.getElementById("bairro").value = dados.bairro;
+        document.getElementById("cidade").value = dados.localidade;
+        document.getElementById("estado").value = dados.uf;
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+function aguardarCampos() {
+    document.getElementById("rua").value = "aguarde...";
+    document.getElementById("bairro").value = "aguarde...";
+    document.getElementById("cidade").value = "aguarde...";
+    document.getElementById("estado").value = "aguarde...";
+}
+
+async function validarFormulario(event) {
     event.preventDefault()
 
     let nome = document.getElementById("nome").value;
@@ -14,11 +66,12 @@ function validarFormulario(event){
     let cidade = document.getElementById("cidade").value;
     let bairro = document.getElementById("bairro").value;
     let complemento = document.getElementById("complemento").value;
+    let anotacoes = document.getElementById("anotacoes").value;
 
     let quantidadeErros = 0;
 
     // Nome
-    if(nome.trim().length == 0) {
+    if (nome.trim().length == 0) {
         formError("nome");
         quantidadeErros++;
         // alert("O campo nome é obrigatório!");
@@ -27,7 +80,7 @@ function validarFormulario(event){
     }
 
     // Sobrenome
-    if(sobrenome.trim().length == 0) {
+    if (sobrenome.trim().length == 0) {
         formError("sobrenome");
         quantidadeErros++;
         // alert("O campo sobrenome é obrigatório!");
@@ -35,8 +88,9 @@ function validarFormulario(event){
         reiniciaBorda("sobrenome");
     }
 
+
     // Email
-    if(email.trim().length == 0) {
+    if (email.trim().length == 0) {
         formError("email");
         quantidadeErros++;
         // alert("O campo email é obrigatório!");
@@ -45,16 +99,16 @@ function validarFormulario(event){
     }
 
     // DDI
-    if(ddi.trim().length == 0) {
+    if (ddi.trim().length == 0) {
         formError("ddi");
         quantidadeErros++;
-        // alert("O campo DDI é obrigatório!");
+        // alert("O campo ddi é obrigatório!");
     } else {
         reiniciaBorda("ddi");
     }
 
     // DDD
-    if(ddd.trim().length == 0) {
+    if (ddd.trim().length == 0) {
         formError("ddd");
         quantidadeErros++;
         // alert("O campo ddd é obrigatório!");
@@ -63,7 +117,7 @@ function validarFormulario(event){
     }
 
     // Numero
-    if(numero.trim().length == 0) {
+    if (numero.trim().length == 0) {
         formError("numero");
         quantidadeErros++;
         // alert("O campo numero é obrigatório!");
@@ -72,7 +126,7 @@ function validarFormulario(event){
     }
 
     // Cep
-    if(cep.trim().length == 0) {
+    if (cep.trim().length == 0) {
         formError("cep");
         quantidadeErros++;
         // alert("O campo cep é obrigatório!");
@@ -81,7 +135,7 @@ function validarFormulario(event){
     }
 
     // Rua
-    if(rua.trim().length == 0) {
+    if (rua.trim().length == 0) {
         formError("rua");
         quantidadeErros++;
         // alert("O campo rua é obrigatório!");
@@ -90,7 +144,7 @@ function validarFormulario(event){
     }
 
     // NumeroCasa
-    if(bloco.trim().length == 0) {
+    if (bloco.trim().length == 0) {
         formError("bloco");
         quantidadeErros++;
         // alert("O campo bloco é obrigatório!");
@@ -99,7 +153,7 @@ function validarFormulario(event){
     }
 
     // Estado
-    if(estado.trim().length == 0) {
+    if (estado.trim().length == 0) {
         formError("estado");
         quantidadeErros++;
         // alert("O campo estado é obrigatório!");
@@ -108,7 +162,7 @@ function validarFormulario(event){
     }
 
     // Cidade
-    if(cidade.trim().length == 0) {
+    if (cidade.trim().length == 0) {
         formError("cidade");
         quantidadeErros++;
         // alert("O campo cidade é obrigatório!");
@@ -117,7 +171,7 @@ function validarFormulario(event){
     }
 
     // Bairro
-    if(bairro.trim().length == 0) {
+    if (bairro.trim().length == 0) {
         formError("bairro");
         quantidadeErros++;
         // alert("O campo bairro é obrigatório!");
@@ -126,7 +180,7 @@ function validarFormulario(event){
     }
 
     // Complemento
-    if(complemento.trim().length == 0) {
+    if (complemento.trim().length == 0) {
         formError("complemento");
         quantidadeErros++;
         // alert("O campo complemento é obrigatório!");
@@ -134,14 +188,42 @@ function validarFormulario(event){
         reiniciaBorda("complemento");
     }
 
-    if(quantidadeErros > 0){
-        alert("Existem " + quantidadeErros + " erros no formulário");
-        quantidadeErros = 0;
+    // Anotações
+    if (anotacoes.trim().length == 0) {
+        formError("anotacoes");
+        quantidadeErros++;
+        // alert("O campo anotacoes é obrigatório!");
     } else {
-        alert("Formulário enviado com sucesso!");
-        reiniciaTodasAsBordas();
+        reiniciaBorda("anotacoes");
     }
 
+    // Hora cadastrar
+    if (quantidadeErros > 0) {
+        alert("Preencha todos os campos!");
+        quantidadeErros = 0; // Reinicia a contagem
+    } else {
+        // Gera um objeto com os dados do formulário
+        let objetoContato = {
+            nome: nome,
+            sobrenome: sobrenome,
+            email: email,
+            ddi: ddi,
+            ddd: ddd,
+            numero: numero,
+            cep: cep,
+            rua: rua,
+            bloco: bloco,
+            estado: estado,
+            cidade: cidade,
+            bairro: bairro,
+            complemento: complemento,
+            anotacoes: anotacoes
+        }
+
+        let cadastro = cadastrarContato(objetoContato);
+
+        reiniciaTodasAsBordas();
+    }
 }
 
 function formError(idCampo) {
@@ -149,7 +231,23 @@ function formError(idCampo) {
 }
 
 function reiniciaBorda(idCampo) {
-    document.getElementById(idCampo).style.border = "transparent";
+    document.getElementById(idCampo).style.border = "";
 }
 
+function reiniciaTodasAsBordas() {
+    reiniciaBorda("nome");
+    reiniciaBorda("sobrenome");
+    reiniciaBorda("email");
+    reiniciaBorda("ddi");
+    reiniciaBorda("ddd");
+    reiniciaBorda("numero");
+    reiniciaBorda("cep");
+    reiniciaBorda("rua");
+    reiniciaBorda("bloco");
+    reiniciaBorda("estado");
+    reiniciaBorda("cidade");
+    reiniciaBorda("bairro");
+    reiniciaBorda("complemento");
+    reiniciaBorda("anotacoes");
+}
 

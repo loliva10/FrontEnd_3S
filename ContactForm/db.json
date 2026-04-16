@@ -1,0 +1,104 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "contatos": [
+    {
+      "id": "1",
+      "nome": "Luis",
+      "sobrenome": "Oliva"
+    },
+    {
+      "id": "2",
+      "nome": "Beatriz",
+      "sobrenome": "Yusmy"
+    },
+    {
+      "nome": "Augusto",
+      "sobrenome": "Costa",
+      "id": "e6YplFNc_4o"
+    },
+    {
+      "nome": "Mirella",
+      "sobrenome": "Souza",
+      "id": "gUawhO6Ve90"
+    },
+    {
+      "nome": "Felipe ",
+      "sobrenome": "Gonçalves",
+      "id": "Uj2OqwttSuQ"
+    },
+    {
+      "nome": "Felipe ",
+      "sobrenome": "Gonçalves",
+      "id": "_2tgKqmYze4"
+    },
+    {
+      "nome": "Mayara ",
+      "sobrenome": "Gussonato",
+      "id": "vI1891yWck8"
+    },
+    {
+      "nome": "Paulo ",
+      "sobrenome": "André",
+      "id": "PdnN5bBck-Y"
+    },
+    {
+      "nome": "Davi",
+      "sobrenome": "Muniz",
+      "id": "pSNFHeQbLfM"
+    },
+    {
+      "nome": "Matheus",
+      "sobrenome": "Félix",
+      "id": "oDS-LG2GyNs"
+    },
+    {
+      "nome": "Marcos",
+      "sobrenome": "Moura",
+      "id": "MhyK6OOYS1Q"
+    },
+    {
+      "nome": "Luis ",
+      "sobrenome": "Fernando de Sousa Oliva",
+      "email": "lfernandooliva@icloud.com",
+      "ddi": "55",
+      "ddd": "011",
+      "numero": "66",
+      "cep": "07181230",
+      "rua": "Avenida Sargento da Aeronáutica Teruo Asaeda",
+      "bloco": "3",
+      "estado": "SP",
+      "cidade": "Guarulhos",
+      "bairro": "Cidade Jardim Cumbica",
+      "complemento": "ap 05",
+      "anotacoes": "teste",
+      "id": "0qFLf3x6FzY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
