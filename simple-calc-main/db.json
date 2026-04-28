@@ -1,0 +1,54 @@
+{
+  "imc": [
+    {
+      "n1": 67,
+      "n2": 76,
+      "operacao": "soma",
+      "resultado": "143.00",
+      "id": "FFbWtIg7fLA"
+    },
+    {
+      "n1": 98,
+      "n2": 46,
+      "operacao": "multiplicacao",
+      "resultado": "4508.00",
+      "id": "ge1spzyACzw"
+    },
+    {
+      "n1": 34,
+      "n2": 29,
+      "operacao": "subtracao",
+      "resultado": "5.00",
+      "id": "gqYLGxcPXts"
+    },
+    {
+      "n1": 12,
+      "n2": 2,
+      "operacao": "divisao",
+      "resultado": "6.00",
+      "id": "jnThwg_yNo0"
+    },
+    {
+      "n1": 100,
+      "n2": 2,
+      "operacao": "divisao",
+      "resultado": "50.00",
+      "id": "mzUKuYtypuA"
+    },
+    {
+      "n1": 45,
+      "n2": 87,
+      "operacao": "soma",
+      "resultado": "132.00",
+      "id": "SDHkKA04dTA"
+    },
+    {
+      "n1": 55,
+      "n2": 59,
+      "operacao": "multiplicacao",
+      "resultado": "3245.00",
+      "id": "QpgqLZ3WaQw"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
