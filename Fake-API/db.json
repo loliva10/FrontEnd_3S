@@ -1,0 +1,89 @@
+{
+  "usuario": [
+    {
+      "id": "1",
+      "nome": "Luis Oliva",
+      "idade": 18,
+      "email": "oliva@icloud.com"
+    },
+    {
+      "nome": "Beatriz Yusmy",
+      "idade": 19,
+      "email": "beayusmy@icloud.com",
+      "id": "NRk1z1szg0c"
+    },
+    {
+      "nome": "Jade Sousa",
+      "idade": 2,
+      "email": "jade@icloud.com",
+      "id": "kKCZvj9yuwE"
+    }
+  ],
+  "frutas": [],
+  "jogos": [],
+  "posts": [
+    {
+      "id": "6n9w5XbEgUM",
+      "texto": "imagem decorativa",
+      "imagem": "https://images.trvl-media.com/localexpert/1790496/71d84da1-ebdb-49a6-a1e2-75936c03475f.jpg?impolicy=resizecrop&rw=1005&rh=565",
+      "qtdCurtida": 31
+    },
+    {
+      "id": "f_N30jbeSC0",
+      "texto": "meu post",
+      "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTJFr_dM-3IFMPkBh-2C9pETZ0jz6GLashpQ&s",
+      "qtdCurtida": 113
+    }
+  ],
+  "imc": [
+    {
+      "nome": "Luis Oliva",
+      "altura": 1.93,
+      "peso": 72,
+      "IMC": 19.329377969878387,
+      "situacao": "Saudável",
+      "id": "1XfzyZBckB8"
+    },
+    {
+      "nome": "Altia",
+      "altura": 1.71,
+      "peso": 45,
+      "IMC": 15.389350569405973,
+      "situacao": "Magreza grave",
+      "id": "zKRD_iPy9ZY"
+    },
+    {
+      "nome": "Bianca Nunes",
+      "altura": 1.73,
+      "peso": 67,
+      "IMC": 22.386314277122523,
+      "situacao": "Saudável",
+      "id": "uk6pOR_THBg"
+    },
+    {
+      "nome": "Felipe Massa",
+      "altura": 1.88,
+      "peso": 71,
+      "IMC": 20.088275237664103,
+      "situacao": "Saudável",
+      "id": "CtARJVJPpZg"
+    },
+    {
+      "nome": "livia Caires",
+      "altura": 1.62,
+      "peso": 57,
+      "IMC": 21.719250114311837,
+      "situacao": "Saudável",
+      "id": "EshzzAQIEzI"
+    },
+    {
+      "nome": "Gabriel Gorgos",
+      "altura": 1.92,
+      "peso": 88,
+      "IMC": 23.87152777777778,
+      "situacao": "Saudável",
+      "id": "nvV5foKk4SQ"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
