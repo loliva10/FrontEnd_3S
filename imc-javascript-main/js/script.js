@@ -64,7 +64,7 @@
         document.getElementById("cadastro").innerHTML += `
         <tr>
             <td>${objCadastro.nome}</td>
-            <td>${objCadastro.altura}</td>
+            <td>${objCadastro.altura}</td>  
             <td>${objCadastro.peso}</td>
             <td>${objCadastro.IMC.toFixed(2)}</td>
             <td>${objCadastro.situacao}</td>

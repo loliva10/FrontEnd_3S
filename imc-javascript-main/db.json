@@ -1,3 +1,37 @@
 {
-    "imc": []
+  "imc": [
+    {
+      "nome": "Luis Oliva",
+      "altura": 1.93,
+      "peso": 74,
+      "IMC": 19.86630513570834,
+      "situacao": "Saudável",
+      "id": "VZZhEhA2OHM"
+    },
+    {
+      "nome": "Jade Sousa",
+      "altura": 1.67,
+      "peso": 64,
+      "IMC": 22.948115744558788,
+      "situacao": "Saudável",
+      "id": "3v30IfiKhe0"
+    },
+    {
+      "nome": "Beatriz Dorinne",
+      "altura": 1.69,
+      "peso": 56,
+      "IMC": 19.607156612163443,
+      "situacao": "Saudável",
+      "id": "wiYrSM-xdKQ"
+    },
+    {
+      "nome": "Marcos Mioto",
+      "altura": 1.83,
+      "peso": 77,
+      "IMC": 22.99262444384723,
+      "situacao": "Saudável",
+      "id": "aUVdPmJ3U-w"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
