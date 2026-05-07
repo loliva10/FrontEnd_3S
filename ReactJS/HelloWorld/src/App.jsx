@@ -1,16 +1,15 @@
 import './App.css';
-import Titulo from './components/title/title';
-import Paragrafo from './components/paragrafo/paragrafo'; 
+import Paragrafo from "./components/paragrafo/paragrafo";
+import Title from "./components/title/title";
 
 function App() {
-  return  (
+  return (
     <>
-      <Titulo textoTitulo="Bem Vindo, sou o título"/>
-      <Titulo textoTitulo="Eu sou outro título"/>
-      <Paragrafo textoParagrafo="Lorem Ipsun dolor!!"/>
-    </>
+      <Title nome="Luis" sobrenome="Oliva" texto="Bem vindo, sou o título"/>
+      <Title texto="Eu sou o titulo"/>
+      <Paragrafo textoParagrafo="Este é o texto do paragráfo"/>
+    </>   
   );
 }
 
 export default App;
-// Cria um componente title
