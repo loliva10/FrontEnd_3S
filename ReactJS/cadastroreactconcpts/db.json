@@ -1,6 +1,19 @@
 {
-    "frutas" : [
-        {"id" : 1, "nome" : "Banana", "quantidade" : 10}, 
-        {"id" : 2, "nome" : "Morango", "quantidade" : 20}
-    ]
+  "produtos": [
+    {
+      "titulo": "Bola TriOnda",
+      "descricao": "Bola da copa do mundo",
+      "preco": 1000,
+      "imagem": "hero.png",
+      "id": "OuXUxm1kONI"
+    },
+    {
+      "titulo": "Jaqueta Bomber Zara",
+      "descricao": "Jaqueta masculina",
+      "preco": 279,
+      "imagem": "hero.png",
+      "id": "qshUIFYtNyc"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
